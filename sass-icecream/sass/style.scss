@@ -1,0 +1,113 @@
+@import "partials/variables";
+@import "partials/mixins";
+@import "partials/classes";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-weight:400;
+}
+body {
+  @include theme(background, $color-light-bg, $color-dark-bg);
+  @include theme(color, $color-dark, $color-light);
+  font-family: $font-base-family;
+  font-size: $font-base-size;
+}
+a {
+  text-decoration: none;
+  transition: 0.3s;
+  &:link {
+    @include theme(color, $color-primary, $color-tan)
+  }
+  &:visited {
+    color: $color-success;
+  }
+  &:hover {
+    @include theme(color, $color-dark, $color-light);
+  }
+  &:active {
+    color: $color-primary;
+  }
+
+}
+.icecream {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 40px);
+  width: 100%;
+}
+.cone {
+  margin-top: -20px;
+  height: 0;
+  width: 0;
+  z-index: 1;
+  border: {
+    right: 45px solid transparent;
+    left: 45px solid transparent;
+    top: 140px solid $color-tan;
+  }
+}
+.cherry {
+  background-image: url(/images/cherry.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 50px;
+  height: 77px;
+  margin-bottom: -10px;
+  z-index: 3;
+}
+.chocolate {
+  @extend .scope;
+  background: $color-chocolate;
+  &::after {
+    background: $color-chocolate;
+  }
+}
+.vanilla {
+  @extend .scope;
+  background: $color-vanilla;
+  &::after {
+    background: $color-vanilla;
+  }
+}
+.orange {
+  @extend .scope;
+  background: $color-orange;
+  &::after {
+    background: $color-orange;
+  }
+}
+.strawberry {
+  @extend .scope;
+  background: $color-strawberry;
+  &::after {
+    background: $color-strawberry;
+  }
+}
+.lemon {
+  @extend .scope;
+  background: $color-lemon;
+  &::after {
+    background: $color-lemon;
+  }
+}
+.footer {
+  display: grid;
+  background: #181818;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  height: 40px;
+  padding: 0 10px;
+  color: theme(color, $color-dark, $color-light);
+  border-top: 1px solid $color-dark-border;
+  .item:last-of-type {
+    text-align: right;
+  }
+  span {
+    color: $color-danger;
+  }
+}

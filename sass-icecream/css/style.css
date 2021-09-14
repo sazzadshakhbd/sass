@@ -1,3 +1,156 @@
+/* theme */
+/* Colors */
+.scope, .chocolate, .vanilla, .orange, .strawberry, .lemon {
+  width: 100px;
+  height: 80px;
+  border-radius: 100%;
+  position: relative;
+  margin-bottom: -45px;
+  z-index: 3;
+  transition: 0.5s;
+  cursor: pointer;
+}
 
+.scope::after, .chocolate::after, .vanilla::after, .orange::after, .strawberry::after, .lemon::after {
+  content: '';
+  position: absolute;
+  bottom: 10px;
+  left: -10px;
+  height: 35px;
+  width: 120px;
+  border-radius: 100%;
+  z-index: 2;
+}
 
+.scope:first-of-type, .chocolate:first-of-type, .vanilla:first-of-type, .orange:first-of-type, .strawberry:first-of-type, .lemon:first-of-type {
+  margin-bottom: 0px;
+}
+
+.scope:hover, .chocolate:hover, .vanilla:hover, .orange:hover, .strawberry:hover, .lemon:hover {
+  transform: scale(1.1);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+}
+
+body {
+  background: #0e0e0e;
+  color: #a2a5b9;
+  font-family: Helvetica;
+  font-size: 14px;
+}
+
+a {
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+a:link {
+  color: tan;
+}
+
+a:visited {
+  color: green;
+}
+
+a:hover {
+  color: #a2a5b9;
+}
+
+a:active {
+  color: #385898;
+}
+
+.icecream {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 40px);
+  width: 100%;
+}
+
+.cone {
+  margin-top: -20px;
+  height: 0;
+  width: 0;
+  z-index: 1;
+  border-right: 45px solid transparent;
+  border-left: 45px solid transparent;
+  border-top: 140px solid tan;
+}
+
+.cherry {
+  background-image: url(/images/cherry.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 50px;
+  height: 77px;
+  margin-bottom: -10px;
+  z-index: 3;
+}
+
+.chocolate {
+  background: #b98160;
+}
+
+.chocolate::after {
+  background: #b98160;
+}
+
+.vanilla {
+  background: #fae8b6;
+}
+
+.vanilla::after {
+  background: #fae8b6;
+}
+
+.orange {
+  background: orange;
+}
+
+.orange::after {
+  background: orange;
+}
+
+.strawberry {
+  background: pink;
+}
+
+.strawberry::after {
+  background: pink;
+}
+
+.lemon {
+  background: #5fd592;
+}
+
+.lemon::after {
+  background: #5fd592;
+}
+
+.footer {
+  display: grid;
+  background: #181818;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  height: 40px;
+  padding: 0 10px;
+  color: theme(color, #1d2129, #a2a5b9);
+  border-top: 1px solid #181818;
+}
+
+.footer .item:last-of-type {
+  text-align: right;
+}
+
+.footer span {
+  color: red;
+}
 /*# sourceMappingURL=style.css.map */
