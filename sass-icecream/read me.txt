@@ -1,0 +1,9 @@
+1. Thanks for sumit dada for exclusive tuturial.
+2. How to setup sass?
+   a) npm i -g sass [Globally setup sass command]
+   b) sass --version [check sass version]
+   c) create sass folder and creats style.scss file
+   d) Project setup done
+3. How to setup sass using vscode editor?
+   a) Download this extension -- Live Sass Compiler - Ritwick Dey
+   b) Click Watch Sass (Below section code editor)
